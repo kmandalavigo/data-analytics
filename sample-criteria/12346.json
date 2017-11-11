@@ -1,0 +1,55 @@
+{
+    "description": "Participants must have normal organ and marrow function as defined below",
+    "any": [
+      {
+        "description": "absolute neutrophil count ≥1,500/mcL",
+        "resource": 
+          {
+            "resourceType": "Observation",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "770-9",
+                  "display": "absolute neutrophil count"
+                }
+              ],
+              "text": "LDL-C"
+            },
+            "valueQuantity": {
+              "value": 1500,
+              "unit": "mCL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mCL"
+            },
+            "expression":" {0} > 130 and {0} < 190"
+          }
+        
+      },
+      {
+        "description": "absolute neutrophil count ≥1,500/mcL",
+        "resource": 
+          {
+            "resourceType": "Observation",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "770-9",
+                  "display": "absolute neutrophil count"
+                }
+              ],
+              "text": "LDL-C"
+            },
+            "valueQuantity": {
+              "value": 1500,
+              "unit": "mCL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mCL"
+            },
+            "expression":" {0 } > 250"
+          }
+        
+      }
+    ]
+  }

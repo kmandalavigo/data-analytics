@@ -1,0 +1,135 @@
+{
+    "description": "Participants must have normal organ and marrow function as defined below",
+    "all": [
+      {
+        "description": "absolute neutrophil count ≥1,500/mcL",
+        "resource": 
+          {
+            "resourceType": "Observation",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "770-9",
+                  "display": "absolute neutrophil count"
+                }
+              ],
+              "text": "Neutrophils"
+            },
+            "valueQuantity": {
+              "value": 1500,
+              "unit": "mCL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mCL"
+            },
+            "expression":" > 1500"
+          }
+        
+      },
+      {
+        "description": "platelets ≥100,000/mcL",
+        "resource": 
+          {
+            "resourceType": "Observation",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "770-12",
+                  "display": "Platelets count"
+                }
+              ],
+              "text": "Platelets"
+            },
+            "valueQuantity": {
+              "value": 100000,
+              "unit": "mCL",
+              "system": "http://unitsofmeasure.org",
+              "code": "mCL"
+            },
+            "expression":"> 100000"
+          }
+        
+      },
+      {
+        "description": "hemoglobin ≥ 8 g/dl",
+        "resource": 
+          {
+            "resourceType": "Observation",
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "718-7",
+                  "display": "Hemoglobin [Mass/volume] in Blood"
+                }
+              ],
+              "text": "Haemoglobin"
+            },
+            "valueQuantity": {
+              "value": 8,
+              "unit": "g/L",
+              "system": "http://unitsofmeasure.org",
+              "code": "g/L"
+            },
+            "expression":">8"
+          }
+        
+      },
+        {
+        "description": "serum creatinine ≤1.5mg/dL or calculated GFR ≥60 mL/min",
+        "any": [
+          {
+            "description": "serum creatinine ≤1.5mg/dL",
+            "resource": 
+              {
+                "resourceType": "Observation",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "718-7",
+                      "display": "Serum creatinine [Mass/volume] in Blood"
+                    }
+                  ],
+                  "text": "Serum creatinine "
+                },
+                "valueQuantity": {
+                  "value": 1.5,
+                  "unit": "mg/DL",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "mg/DL"
+                },
+                "expression":"<= 1.5"
+              }
+            
+          },
+          {
+            "description": "calculated GFR ≥60 mL/min",
+            "resource": 
+              {
+                "resourceType": "Observation",
+                "code": {
+                  "coding": [
+                    {
+                      "system": "http://loinc.org",
+                      "code": "718-12",
+                      "display": " Calculated GFR [Volume/time] in Blood"
+                    }
+                  ],
+                  "text": "Serum creatinine "
+                },
+                "valueQuantity": {
+                  "value": 60,
+                  "unit": "ml/min",
+                  "system": "http://unitsofmeasure.org",
+                  "code": "ml/min"
+                },
+                "expression":">=60"
+              }
+            
+          }
+        ]
+      }
+    ]
+  }
